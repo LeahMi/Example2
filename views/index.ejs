@@ -3,20 +3,20 @@
 
 <body>
     <%- include('./partials/nav.ejs') %> 
-    <div class="blogs content">
-        <h2>All Blogs</h2>
+    <div class="patients content">
+        <h2>All Patients</h2>
         
-        <% if (blogs.length >0) { %>
-            <% blogs.forEach(blog =>{ %>
-                <a class="single" href="/blogs/<%= blog._id %>">
-                    <h3 class="title"><%= blog.title %></h3>
-                    <p class="snippet"><%= blog.snippet %></p>
+        <% if (patients.length >0) { %>
+            <% patients.forEach(patient =>{ %>
+                <a class="single" href="/patients/<%= patient._id %>">
+                    <h3 class="firstName"><%= patient.firstName %></h3>
+                    <p class="lastName"><%= patient.lastName %></p>
                   </a>
             <% }) %>
 
 
         <% }else {%>
-            <p>There are no blogs to display...</p>
+            <p>There are no patients to display...</p>
         <% } %>
 
     </div>
