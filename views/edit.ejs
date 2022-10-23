@@ -1,0 +1,139 @@
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+
+<body>
+    <%- include('./partials/nav.ejs') %> 
+    <div class="edit-patient content">
+        <form action="/patients/<%= patient._id %>" method="POST">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" value="<%= patient.firstName %>" pattern="[a-zA-Z]{3,}" required>
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" value="<%= patient.lastName %>" pattern="[a-zA-Z]{3,}" required>
+            <label for="Id">id:</label>
+            <input type="text" id="Id" name="Id" value="<%= patient.Id %>" pattern="[0-9]{9}" required>
+            <!-- <textarea id="id" name="id" required><%= patient.id %></textarea> -->
+            <label for="birthDay" id="birthDay" name="birthDay">birthDay: </label>
+            <input type="date" name="birthDay" 
+                placeholder="dd-mm-yyyy" value=''
+                min="1917-01-01" max="2030-12-31" required>
+            <label for="phoneNumber">Phone Number:</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber" value="<%= patient.phoneNumber %>" pattern="[0-9]{9,10}" required>
+            <label for="mobileNumber">Mobile Number:</label>
+            <input type="tel" id="mobileNumber" name="mobileNumber" value="<%= patient.mobileNumber %>" pattern="[0-9]{9,10}" required>
+            <label>City:</label>
+            <input type="text" name="city" value="<%= patient.city %>" pattern="[a-zA-Z]+" required>
+            <label>Street:</label>
+            <input type="text" name="street" value="<%= patient.street %>" pattern="[a-zA-Z]+" required>
+            <div class="street error"></div>
+            <label>House Number:</label>
+            <input type="text" name="houseNumber" value="<%= patient.houseNumber %>" pattern="[0-9]+" required>
+            <label for="receivingCoronaVaccine" id="receivingCoronaVaccine" name="receivingCoronaVaccine">Date of receipt of vaccination:</label>
+            <input type="date" name="receivingCoronaVaccine" 
+                placeholder="dd-mm-yyyy" value=""
+                min="1997-01-01" max="2030-12-31" >
+            <label>Vaccine Manufacturer:</label>
+            <input type="text" value="<%= patient.vaccination.vaccineManufacturer %>" name="vaccineManufacturer" pattern="[a-zA-Z]+">
+            <label>Receiving Positive Result:</label>
+            <input type="date" name="receivingPositiveResult" 
+                placeholder="dd-mm-yyyy" value=""
+                min="1997-01-01" max="2030-12-31" >
+            <label>Recovery:</label>
+            <input type="date" name="recovery" 
+                placeholder="dd-mm-yyyy" value=""
+                min="1997-01-01" max="2030-12-31" >
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>
+
+<script>
+
+    const citiesArray =['eilat',
+     'jerusalem',
+     'nazareth' ,
+     'haifa',
+     'zikhron ya’akov ',
+     'arad',
+     'netanya',
+     'nahariya',
+     'kfar tavor',
+     'hebron',
+     'kinneret moshava',
+     'holon',
+     'bat shlomo',
+     'bnei brak' ,
+     'the negev desert ',
+     'the lowlands',
+     'abu snan',
+     'julis',
+     'maghar',
+     'samia',
+     'ein al-assad',
+     'isfiya',
+     'keysarya' ,
+     'beer sheva',
+     'sde boker',
+     'yad moredechai',
+     'rosh-pina' ,
+     'kiryat shmona',
+     'kiryat malachi',
+     'ein gedi',
+     'ein-hod' ,
+     ' kfar nakhum',
+     ' hazor haglilit',
+     'metula' ,
+     'harduf',
+     'ashdod',
+     'kfar kama',
+     'abu gosh' ,
+     'jezreel valley',
+     ' the judean desert',
+     'sea of galilee',
+     'beit jann',
+     'sajur',
+     'rameh',
+     'daliyat el-carmel',
+     'the golan heights',
+     'tiberias',
+     'mitspe ramon',
+     'akko',
+     'katzerin',
+     'nahalal',
+     'kfar yasif',
+     'hanita',
+     'maalot tarshiha',
+     'bat yam',
+     'the hula valley' ,
+     'hevel habsor',
+     'the arava',
+     'the galilee',
+     'gush dan',
+     'the nitzana region',
+     'yanuh',
+     'yarka',
+     'kisra',
+     'hurfeish',
+     'shefa-amr',
+     'the dead sea',
+     'tel aviv jaffa',
+     'tsefat' ,
+     'tel-hai ',
+     'ramla',
+     'hertzeliya' ,
+     'gush halav',
+     'ashkelon' ,
+     'beit shean' ,
+     'cana' ,
+     'jatt',
+     'rehaniya',
+     'degania']
+    function selectOne() {
+     var select = document.getElementById('city')
+     for (var i=citiesArray.length-1; i>=0; i--) {
+      var x= citiesArray[i].charAt(0).toUpperCase() + citiesArray[i].slice(1);
+      select.options[select.options.length] = new Option(x, citiesArray[i])  }
+    }
+    selectOne()
+   </script>
