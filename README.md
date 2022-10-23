@@ -7,6 +7,7 @@
  * [Technologies](#Technologies)
  * [Launch](#Launch)
  * [Author](#Author)
+ * [How to use](#How to use)
  
 # Introduction
 A full stack system for managing the Corona database for a HMO, includes full crud.
@@ -41,9 +42,18 @@ All installations and directories are downloaded automatically <br />
 # 📗 Author
 Dvora Mizrahi <br />
 
+
+# How to use
+
+Displaying the list of patients
+
 ![image](https://user-images.githubusercontent.com/77249956/197381415-ce050b41-a959-4b30-b054-1762f3d684af.png)
 
+Adding a patient
+
 ![image](https://user-images.githubusercontent.com/77249956/197381422-64cbdb32-1586-4e09-9a56-0ea7b4104ef9.png)
+
+Patient details with editing and deletion option
 
 ![image](https://user-images.githubusercontent.com/77249956/197381470-09b8a624-37ba-4a8c-8f8d-32c05400eccc.png)
 
