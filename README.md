@@ -1,5 +1,6 @@
 # Patients system web
 
+
  
 # Table of Contents 
  * [Introduction](#Introduction)
@@ -29,7 +30,7 @@ A full stack system for managing the Corona database for a HMO, includes full cr
 # Launch
 ### 🛠️ Installation Steps
 1. Open folder for this project and clone this repository use follow command: <br />
-``` git@github.com:Mussil/Project2.git ``` <br />
+``` git@github.com:LeahMi/web-FullStuck.git ``` <br />
 2. To run this project, install it locally using npm: <br /> 
 ``` npm install``` <br />
 All installations and directories are downloaded automatically <br />
