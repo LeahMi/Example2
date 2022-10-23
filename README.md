@@ -6,7 +6,7 @@
  * [Introduction](#Introduction)
  * [Technologies](#Technologies)
  * [Launch](#Launch)
- * [Authors](#Authors)
+ * [Author](#Author)
  
 # Introduction
 A full stack system for managing the Corona database for a HMO, includes full crud.
@@ -39,7 +39,7 @@ All installations and directories are downloaded automatically <br />
 
 
 
-# 📗 Authors
+# 📗 Author
 Dvora Mizrahi <br />
 
 
