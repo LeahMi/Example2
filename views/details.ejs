@@ -5,12 +5,23 @@
   <%- include("./partials/nav.ejs") %>
 
   <div class="details content">
-    <h2><%= blog.title %></h2>
+    <h2><%= patient.firstName %> <%= patient.lastName %></h2>
     <div class="content">
-      <p><%= blog.body %></p>
+      <p>Id: <%= patient.Id %></p>
+      <p>BirthDay: <%= patient.birthDay%></p>
+      <p>Phone Number: <%= patient.phoneNumber%></p>
+      <p>Mobile Number: <%= patient.mobileNumber%></p>
+      <p>Address: <%= patient.city%> <%= patient.street%> <%= patient.houseNumber %></p>
+      <p>Date of receiving the corona vaccine: <%= patient.vaccination.receivingCoronaVaccine %></p>
+      <p>Vaccine Manufacturer: <%= patient.vaccination.vaccineManufacturer %></p>
+      <p>Date of receiving a positive result: <%= patient.receivingPositiveResult %></p>
+      <p>Date of recovery from the disease: <%= patient.recovery %></p>
     </div>
-    <a class="delete" data-doc="<%= blog._id %>">
+    <a class="delete" data-doc="<%= patient._id %>">
       <img src="/trashcan.svg" alt="delete icon">
+    </a>
+    <a class="edit" href="/patients/<%= patient._id %>/edit" data-doc="<%= patient._id %>">
+      <img src="/edit.svg" alt="edit icon">
     </a>
   </div>
 
@@ -20,7 +31,7 @@
     const trashcan = document.querySelector('a.delete');
 
     trashcan.addEventListener('click', (e) => {
-      const endpoint = `/blogs/${trashcan.dataset.doc}`;
+      const endpoint = `/patients/${trashcan.dataset.doc}`;
 
       fetch(endpoint, {
         method: 'DELETE',
@@ -29,7 +40,6 @@
       .then(data => window.location.href = data.redirect)
       .catch(err => console.log(err));
     });
-    
   </script>
 </body>
 </html>
