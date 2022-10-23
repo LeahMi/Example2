@@ -46,7 +46,8 @@ const patientSchema = new Schema({
         type: String
     },
     vaccination: {
-        type: vaccinationModel.schema
+        type: [vaccinationModel.schema],
+        validate: [arrayLimit, '{PATH} exceeds the limit of 4']
     },
     receivingPositiveResult: {
         type: Date
