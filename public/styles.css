@@ -55,13 +55,13 @@
     }
 
     /* index styles */
-    .blogs a{
+    .patients a{
       display: block;
       margin: 40px 0;
       padding-left: 30px;
       border-left: 6px solid crimson;
     }
-    .blogs a:hover h3{
+    .patients a:hover h3{
       color: crimson;
     }
 
@@ -80,27 +80,65 @@
       cursor: pointer;
       box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
     }
+    .edit{
+      position: absolute;
+      top: 8;
+      right: 45;
+      border-radius: 50%;
+    }
+    .edit:hover{
+      cursor: pointer;
+      box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
+    }
 
     /* create styles */
-    .create-blog form{
+    .create-patient form{
       max-width: 400px;
       margin: 0 auto;
     }
-    .create-blog input,
-    .create-blog textarea{
+    .create-patient input,
+    .create-patient textarea{
       display: block;
       width: 100%;
       margin: 10px 0;
       padding: 8px;
     }
-    .create-blog label{
+    .create-patient label{
       display: block;
       margin-top: 24px;
     }
     textarea{
       height: 120px;
     }
-    .create-blog button{
+    .create-patient button{
+      margin-top: 20px;
+      background: crimson;
+      color: white;
+      padding: 6px;
+      border: 0;
+      font-size: 1.2em;
+      cursor: pointer;
+    }
+
+    .edit-patient form{
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    .edit-patient input,
+    .edit-patient textarea{
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+      padding: 8px;
+    }
+    .edit-patient label{
+      display: block;
+      margin-top: 24px;
+    }
+    textarea{
+      height: 120px;
+    }
+    .edit-patient button{
       margin-top: 20px;
       background: crimson;
       color: white;
