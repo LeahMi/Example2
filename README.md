@@ -41,5 +41,11 @@ All installations and directories are downloaded automatically <br />
 # 📗 Author
 Dvora Mizrahi <br />
 
+![image](https://user-images.githubusercontent.com/77249956/197381415-ce050b41-a959-4b30-b054-1762f3d684af.png)
+
+![image](https://user-images.githubusercontent.com/77249956/197381422-64cbdb32-1586-4e09-9a56-0ea7b4104ef9.png)
+
+![image](https://user-images.githubusercontent.com/77249956/197381470-09b8a624-37ba-4a8c-8f8d-32c05400eccc.png)
+
 
 
