@@ -17,7 +17,7 @@ A full stack system for managing the Corona database for a HMO, includes full cr
   * Css <br />
   * HTML <br /> 
 #### Workspace: <br /> 
-  * WebStorm version: 2020.3.2 <br />
+  * Visual Studio Code version: 2022.1.72 <br />
 #### External tools:  <br />
   * Node js
   * Circleci
